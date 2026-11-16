@@ -1,0 +1,9 @@
+url: "https://sahararefund.in"
+title: "SaharaRefund.in"
+lang: hi
+markdown: kramdown
+# sirf ye files site me jayengi; baaki ignore
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
