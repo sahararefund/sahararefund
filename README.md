@@ -14,4 +14,4 @@ Naye Tailwind classes HTML me likhne ke baad CSS dobara build karni padti hai:
     npm run build
 
 Isse style.css naye sire se ban jati hai. Bina build kiye nayi class kaam nahi karegi.
-Rang aur font: tailwind.config.js. Custom components (btn, card, callout): src/input.css
+Font (Poppins): tailwind.config.js + _layouts/default.html. Rang: Tailwind ka orange/neutral palette. Components (btn, tile, sec, chip, callout): src/input.css

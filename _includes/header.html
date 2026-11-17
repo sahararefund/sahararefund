@@ -1,44 +1,53 @@
-<div class="border-b border-amber-300 bg-amber-100 text-amber-950" role="note">
-  <div class="container-x flex flex-col items-center justify-center gap-x-3 gap-y-0.5 py-2 text-center text-[13px] leading-snug sm:flex-row">
-    <p><strong>सूचना:</strong> यह भारत सरकार या किसी सरकारी विभाग की वेबसाइट नहीं है। यह एक स्वतंत्र सूचना वेबसाइट है।</p>
-    <a class="font-semibold underline" href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer">आधिकारिक पोर्टल ↗</a>
+<div class="bg-neutral-950 text-white" role="note">
+  <div class="container-x py-2 text-center text-[13px] leading-snug sm:text-sm">
+    <strong>सूचना:</strong> यह सरकारी वेबसाइट नहीं है, एक स्वतंत्र सूचना वेबसाइट है। आधिकारिक पोर्टल:
+    <a class="font-semibold text-orange-400 underline" href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer">mocrefund.crcs.gov.in ↗</a>
   </div>
 </div>
 
-<header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
-  <div class="container-x flex h-16 items-center justify-between gap-4">
+<header class="border-b border-neutral-200 bg-white">
+  <div class="container-x flex items-center justify-between gap-4 py-3">
     <a href="/" class="flex min-w-0 items-center gap-3">
-      <img src="/favicon.svg" alt="" width="36" height="36" class="h-9 w-9 shrink-0 rounded-xl">
+      <img src="/favicon.svg" alt="" width="40" height="40" class="h-10 w-10 shrink-0 rounded-xl">
       <span class="min-w-0 leading-snug">
-        <span class="block truncate text-base font-bold text-brand-950">सहारा रिफंड जानकारी</span>
-        <span class="block truncate text-xs text-slate-500">SaharaRefund.in · स्वतंत्र सूचना साइट</span>
+        <span class="block truncate text-lg font-bold text-neutral-900">सहारा रिफंड जानकारी</span>
+        <span class="block truncate text-xs text-neutral-500">SaharaRefund.in · स्वतंत्र सूचना साइट</span>
       </span>
     </a>
 
-    <nav class="hidden items-center gap-1 lg:flex" aria-label="मुख्य मेनू">
-      <a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">होम</a>
-      <a href="/about.html" class="nav-link{% if page.url == '/about.html' %} is-active{% endif %}">हमारे बारे में</a>
-      <a href="/contact.html" class="nav-link{% if page.url == '/contact.html' %} is-active{% endif %}">संपर्क</a>
-      <a href="/privacy-policy.html" class="nav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">गोपनीयता नीति</a>
-      <a href="/disclaimer.html" class="nav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">अस्वीकरण</a>
-    </nav>
-
     <div class="flex shrink-0 items-center gap-2">
-      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-primary hidden !px-4 !py-2 xl:inline-flex">आधिकारिक पोर्टल ↗</a>
-      <button id="menu-btn" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="मेनू खोलें">
+      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-orange hidden !px-4 !py-2 sm:inline-flex">आधिकारिक पोर्टल ↗</a>
+      <button id="menu-btn" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-300 text-neutral-700 hover:bg-neutral-100 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="मेनू खोलें">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
 
-  <div id="mobile-menu" class="border-t border-slate-200 bg-white lg:hidden" hidden>
+  <nav class="hidden border-t border-neutral-100 lg:block" aria-label="मुख्य मेनू">
+    <ul class="container-x flex items-center">
+      <li><a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">होम</a></li>
+      <li><a href="/#eligibility" class="nav-link">पात्रता</a></li>
+      <li><a href="/#process" class="nav-link">आवेदन प्रक्रिया</a></li>
+      <li><a href="/#documents" class="nav-link">दस्तावेज़</a></li>
+      <li><a href="/#faq" class="nav-link">सवाल-जवाब</a></li>
+      <li><a href="/about.html" class="nav-link{% if page.url == '/about.html' %} is-active{% endif %}">हमारे बारे में</a></li>
+      <li><a href="/contact.html" class="nav-link{% if page.url == '/contact.html' %} is-active{% endif %}">संपर्क</a></li>
+      <li><a href="/disclaimer.html" class="nav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">अस्वीकरण</a></li>
+    </ul>
+  </nav>
+
+  <div id="mobile-menu" class="border-t border-neutral-200 bg-white lg:hidden" hidden>
     <nav class="container-x grid gap-1 py-3" aria-label="मोबाइल मेनू">
       <a href="/" class="mnav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">होम</a>
+      <a href="/#eligibility" class="mnav-link">पात्रता</a>
+      <a href="/#process" class="mnav-link">आवेदन प्रक्रिया</a>
+      <a href="/#documents" class="mnav-link">दस्तावेज़</a>
+      <a href="/#faq" class="mnav-link">सवाल-जवाब</a>
       <a href="/about.html" class="mnav-link{% if page.url == '/about.html' %} is-active{% endif %}">हमारे बारे में</a>
       <a href="/contact.html" class="mnav-link{% if page.url == '/contact.html' %} is-active{% endif %}">संपर्क</a>
       <a href="/privacy-policy.html" class="mnav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">गोपनीयता नीति</a>
       <a href="/disclaimer.html" class="mnav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">अस्वीकरण</a>
-      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-primary mt-2">आधिकारिक पोर्टल खोलें ↗</a>
+      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-orange mt-2">आधिकारिक पोर्टल खोलें ↗</a>
     </nav>
   </div>
 </header>
