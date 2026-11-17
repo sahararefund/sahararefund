@@ -1,27 +1,55 @@
-<div class="topbar" role="note">
-  ⚠️ महत्वपूर्ण: यह भारत सरकार या किसी सरकारी विभाग की वेबसाइट नहीं है। यह एक स्वतंत्र सूचना वेबसाइट है। आधिकारिक पोर्टल: <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer">mocrefund.crcs.gov.in</a>
+<div class="border-b border-amber-300 bg-amber-100 text-amber-950" role="note">
+  <div class="container-x flex flex-col items-center justify-center gap-x-3 gap-y-0.5 py-2 text-center text-[13px] leading-snug sm:flex-row">
+    <p><strong>सूचना:</strong> यह भारत सरकार या किसी सरकारी विभाग की वेबसाइट नहीं है। यह एक स्वतंत्र सूचना वेबसाइट है।</p>
+    <a class="font-semibold underline" href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer">आधिकारिक पोर्टल ↗</a>
+  </div>
 </div>
 
-<header class="site">
-  <div class="wrap head-row">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">₹</span>
-      <span class="brand-text">
-        <strong>सहारा रिफंड जानकारी</strong>
-        <span>SaharaRefund.in · स्वतंत्र सूचना वेबसाइट</span>
+<header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+  <div class="container-x flex h-16 items-center justify-between gap-4">
+    <a href="/" class="flex min-w-0 items-center gap-3">
+      <img src="/favicon.svg" alt="" width="36" height="36" class="h-9 w-9 shrink-0 rounded-xl">
+      <span class="min-w-0 leading-snug">
+        <span class="block truncate text-base font-bold text-brand-950">सहारा रिफंड जानकारी</span>
+        <span class="block truncate text-xs text-slate-500">SaharaRefund.in · स्वतंत्र सूचना साइट</span>
       </span>
     </a>
-    <span class="badge-unofficial">Not A Offcial Website</span>
-  </div>
-  <nav class="main" aria-label="मुख्य मेनू">
-    <div class="wrap">
-      <ul>
-        <li><a href="/"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>Home</a></li>
-        <li><a href="/about-us.html"{% if page.url == '/about-us.html' %} class="active"{% endif %}>About Us</a></li>
-        <li><a href="/contact-us.html"{% if page.url == '/contact-us.html' %} class="active"{% endif %}>Contact Us</a></li>
-        <li><a href="/privacy-policy.html"{% if page.url == '/privacy-policy.html' %} class="active"{% endif %}>Privacy Policy</a></li>
-        <li><a href="/disclaimer.html"{% if page.url == '/disclaimer.html' %} class="active"{% endif %}>Disclaimer</a></li>
-      </ul>
+
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="मुख्य मेनू">
+      <a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">होम</a>
+      <a href="/about.html" class="nav-link{% if page.url == '/about.html' %} is-active{% endif %}">हमारे बारे में</a>
+      <a href="/contact.html" class="nav-link{% if page.url == '/contact.html' %} is-active{% endif %}">संपर्क</a>
+      <a href="/privacy-policy.html" class="nav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">गोपनीयता नीति</a>
+      <a href="/disclaimer.html" class="nav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">अस्वीकरण</a>
+    </nav>
+
+    <div class="flex shrink-0 items-center gap-2">
+      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-primary hidden !px-4 !py-2 xl:inline-flex">आधिकारिक पोर्टल ↗</a>
+      <button id="menu-btn" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="मेनू खोलें">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
-  </nav>
+  </div>
+
+  <div id="mobile-menu" class="border-t border-slate-200 bg-white lg:hidden" hidden>
+    <nav class="container-x grid gap-1 py-3" aria-label="मोबाइल मेनू">
+      <a href="/" class="mnav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">होम</a>
+      <a href="/about.html" class="mnav-link{% if page.url == '/about.html' %} is-active{% endif %}">हमारे बारे में</a>
+      <a href="/contact.html" class="mnav-link{% if page.url == '/contact.html' %} is-active{% endif %}">संपर्क</a>
+      <a href="/privacy-policy.html" class="mnav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">गोपनीयता नीति</a>
+      <a href="/disclaimer.html" class="mnav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">अस्वीकरण</a>
+      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-primary mt-2">आधिकारिक पोर्टल खोलें ↗</a>
+    </nav>
+  </div>
 </header>
+<script>
+  (function () {
+    var b = document.getElementById('menu-btn'), m = document.getElementById('mobile-menu');
+    if (!b || !m) return;
+    b.addEventListener('click', function () {
+      var open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', String(!open));
+      m.hidden = open;
+    });
+  })();
+</script>

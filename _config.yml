@@ -2,8 +2,13 @@ url: "https://sahararefund.in"
 title: "SaharaRefund.in"
 lang: hi
 markdown: kramdown
-# sirf ye files site me jayengi; baaki ignore
+# in files ko site ke saath publish nahi karna
 exclude:
   - README.md
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - src
+  - node_modules
   - Gemfile
   - Gemfile.lock
