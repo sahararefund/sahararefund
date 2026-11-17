@@ -26,7 +26,7 @@
   <nav class="hidden border-t border-neutral-100 lg:block" aria-label="मुख्य मेनू">
     <ul class="container-x flex items-center">
       <li><a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">Home</a></li>
-      <li><a href="/#eligibility" class="nav-link">पात्रता</a></li>
+      <li><a href="/eligibility" class="nav-link{% if page.url == '/eligibility' %} is-active{% endif %}">Eligibility</a></li>
       <li><a href="/#process" class="nav-link">आवेदन प्रक्रिया</a></li>
       <li><a href="/#documents" class="nav-link">दस्तावेज़</a></li>
       <li><a href="/#faq" class="nav-link">सवाल-जवाब</a></li>
@@ -40,7 +40,7 @@
   <div id="mobile-menu" class="border-t border-neutral-200 bg-white lg:hidden" hidden>
     <nav class="container-x grid gap-1 py-3" aria-label="मोबाइल मेनू">
       <a href="/" class="mnav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">Home</a>
-      <a href="/#eligibility" class="mnav-link">पात्रता</a>
+      <li><a href="/eligibility" class="nav-link{% if page.url == '/eligibility' %} is-active{% endif %}">Eligibility</a></li>
       <a href="/#process" class="mnav-link">आवेदन प्रक्रिया</a>
       <a href="/#documents" class="mnav-link">दस्तावेज़</a>
       <a href="/#faq" class="mnav-link">सवाल-जवाब</a>
