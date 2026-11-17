@@ -27,9 +27,9 @@
     <ul class="container-x flex items-center">
       <li><a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">Home</a></li>
       <li><a href="/eligibility" class="nav-link{% if page.url == '/eligibility' %} is-active{% endif %}">Eligibility</a></li>
-      <li><a href="/#process" class="nav-link">आवेदन प्रक्रिया</a></li>
-      <li><a href="/#documents" class="nav-link">दस्तावेज़</a></li>
-      <li><a href="/#faq" class="nav-link">सवाल-जवाब</a></li>
+      <li><a href="/application-process.html" class="nav-link{% if page.url == '/application-process.html' %} is-active{% endif %}">Application Process</a></li>
+      <li><a href="/documents.html" class="nav-link{% if page.url == '/documents.html' %} is-active{% endif %}">Documents</a></li>
+      <li><a href="/scam-alert.html" class="nav-link{% if page.url == '/scam-alert.html' %} is-active{% endif %}">Scam Alert</a></li>
       <li><a href="/about.html" class="nav-link{% if page.url == '/about.html' %} is-active{% endif %}">About Us</a></li>
       <li><a href="/contact.html" class="nav-link{% if page.url == '/contact.html' %} is-active{% endif %}">Contact Us</a></li>
       <li><a href="/privacy-policy.html" class="nav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">Privacy Policy</a></li>
@@ -37,20 +37,31 @@
     </ul>
   </nav>
 
-  <div id="mobile-menu" class="border-t border-neutral-200 bg-white lg:hidden" hidden>
-    <nav class="container-x grid gap-1 py-3" aria-label="मोबाइल मेनू">
-      <a href="/" class="mnav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">Home</a>
-      <li><a href="/eligibility" class="nav-link{% if page.url == '/eligibility' %} is-active{% endif %}">Eligibility</a></li>
-      <a href="/#process" class="mnav-link">आवेदन प्रक्रिया</a>
-      <a href="/#documents" class="mnav-link">दस्तावेज़</a>
-      <a href="/#faq" class="mnav-link">सवाल-जवाब</a>
-      <a href="/about.html" class="mnav-link{% if page.url == '/about.html' %} is-active{% endif %}">About Us</a>
-      <a href="/contact.html" class="mnav-link{% if page.url == '/contact.html' %} is-active{% endif %}">Contact Us</a>
-      <a href="/privacy-policy.html" class="mnav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">Privacy Policy</a>
-      <a href="/disclaimer.html" class="mnav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">Disclaimer</a>
-      <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-orange mt-2">आधिकारिक पोर्टल खोलें ↗</a>
-    </nav>
-  </div>
+```html
+<div id="mobile-menu" class="border-t border-neutral-200 bg-white lg:hidden" hidden>
+  <nav class="container-x grid gap-1 py-3" aria-label="मोबाइल मेनू">
+    <a href="/" class="mnav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">Home</a>
+
+    <a href="/eligibility" class="mnav-link{% if page.url == '/eligibility' %} is-active{% endif %}">Eligibility</a>
+
+    <a href="/application-process.html" class="mnav-link{% if page.url == '/application-process.html' %} is-active{% endif %}">Application Process</a>
+
+    <a href="/documents.html" class="mnav-link{% if page.url == '/documents.html' %} is-active{% endif %}">Documents</a>
+
+    <a href="/scam-alert.html" class="mnav-link{% if page.url == '/scam-alert.html' %} is-active{% endif %}">Scam Alert</a>
+
+    <a href="/about.html" class="mnav-link{% if page.url == '/about.html' %} is-active{% endif %}">About Us</a>
+
+    <a href="/contact.html" class="mnav-link{% if page.url == '/contact.html' %} is-active{% endif %}">Contact Us</a>
+
+    <a href="/privacy-policy.html" class="mnav-link{% if page.url == '/privacy-policy.html' %} is-active{% endif %}">Privacy Policy</a>
+
+    <a href="/disclaimer.html" class="mnav-link{% if page.url == '/disclaimer.html' %} is-active{% endif %}">Disclaimer</a>
+
+    <a href="https://mocrefund.crcs.gov.in" target="_blank" rel="noopener noreferrer" class="btn-orange mt-2">आधिकारिक पोर्टल खोलें ↗</a>
+  </nav>
+</div>
+```
 </header>
 <script>
   (function () {
